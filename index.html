@@ -2,10 +2,9 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class名補助ツール</title>
-    <style>
-        /* CSSは後述 */
-    </style>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
@@ -15,10 +14,13 @@
     <div class="container">
         <section class="tool-section">
             <h2>📝 日本語からClass名を提案</h2>
-            <input type="text" id="japaneseInput" placeholder="例: 商品一覧">
-            <div id="translationOutput" class="output-box">
-                <p>提案されるClass名: <span id="suggestedName">--</span></p>
-                <button onclick="copyToClipboard('suggestedName')">コピー</button>
+            <p>「商品一覧」などの日本語を入力すると、適切な英語のクラス名を提案します。</p>
+            <div class="input-group">
+                <input type="text" id="japaneseInput" placeholder="例: 商品一覧">
+                <div id="translationOutput" class="output-box">
+                    <p>提案されるClass名: <span id="suggestedName">--</span></p>
+                    <button id="copySuggestedBtn">コピー</button>
+                </div>
             </div>
         </section>
 
@@ -30,9 +32,7 @@
                 </div>
         </section>
     </div>
-
-    <script>
-        // JavaScriptは後述
-    </script>
+    
+    <script src="script.js"></script> 
 </body>
 </html>
